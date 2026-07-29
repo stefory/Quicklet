@@ -2,60 +2,58 @@
 
 # ⚡ Quicklet
 
-**极速 Windows 网页唤起与带参搜索工具**
+**极简、极速的 Windows 网页直达与带参搜索效率神器**
 
-*启发自 Raycast & Alfred，专为 Windows 用户打造的键盘优先桌面效率神器*
+*去除繁杂，键盘优先 — 让网页打开与搜索从数步繁琐缩短至 1 秒按键*
 
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?logo=windows)](https://github.com)
-[![Framework](https://img.shields.io/badge/Framework-.NET%208%20WPF-purple?logo=dotnet)](https://github.com)
-[![Size](https://img.shields.io/badge/Exe%20Size-234%20KB-success)](https://github.com)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue?logo=windows)](https://github.com/stefory/Quicklet)
+[![Framework](https://img.shields.io/badge/Framework-.NET%208%20WPF-purple?logo=dotnet)](https://github.com/stefory/Quicklet)
+[![Size](https://img.shields.io/badge/Exe%20Size-~200%20KB-success)](https://github.com/stefory/Quicklet)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 </div>
 
 ---
 
-## 📖 简介 (Overview)
+<div align="center">
 
-**Quicklet** 是一款原生、极轻量、极速的 Windows 全局热键网页直达与带参搜索工具。
+| 深色模式 (Dark Theme) | 浅色模式 (Light Theme) |
+| :---: | :---: |
+| <img src="docs/preview-dark.png" width="380" alt="Quicklet 深色模式" /> | <img src="docs/preview-light.png" width="380" alt="Quicklet 浅色模式" /> |
 
-在日常开发与办公中，我们频繁需要在浏览器中打开 GitHub、Google 翻译、哔哩哔哩、YouTube 或特定内部站点。传统的做法是打开浏览器、点击书签或输入网址，过程繁琐且打断专注。
-
-Quicklet 让一切回归键盘：**按下全局快捷键（默认 `Alt + Q`），输入触发词（如 `gh` 或 `bilibili`）加搜索内容，按下回车即可一秒直达目标网页！**
-
----
-
-## ✨ 核心功能 (Core Features)
-
-### 1. 🚀 快捷键唤起 & 键盘优先 (Global Hotkey & Keyboard-First)
-* **全局快捷键**：默认 `Alt + Q`（支持在设置中心随时自定义录制），无论处于任何软件中，随叫随到，按 `Esc` 极速隐藏。
-* **高灵敏录制**：设置中心内置防止 focus 丢失的事件拦截机制，点击键帽即可精准录制任意组合键。
-
-### 2. 🎯 双模式智能路由 (Smart Dual-Mode Routing)
-* **网页直达 (Direct Jump)**：输入关键字（如 `bilibili`）按 Enter，直接在浏览器中打开站点的首页。
-* **带参搜索 (Parametric Search)**：输入关键字 + 空格 + 检索内容（如 `github wpf`），自动替换 URL 中的 `{query}` 占位符并唤起浏览器搜索结果页。
-* **默认搜索引擎兜底**：输入非自定义关键字内容时，自动使用配置的默认搜索引擎（支持 Google、百度、必应或自定义 URL）。
-
-### 3. 🎨 极致的 Windows 11 Fluent 视觉美学 (Native Windows Design)
-* **原生 Fluent 风格**：专为 Windows 11 设计的现代卡片式 UI，告别 MacOS 移植感。
-* **自动亮/暗主题同步**：实时监听 Windows 系统注册表，跟随系统亮色/深色主题无缝自动切换。
-* **自定义无边框弹窗 (Custom MessageBox)**：告别老旧的 Win32 灰色提示框，提示弹窗与主界面采用完全一致的圆角、投影及主题色。
-* **极简 8px 悬浮滚动条 (Slim Floating ScrollBar)**：借鉴 VS Code 与 macOS 规范，无箭头、透明轨底、8px 窄径圆角胶囊滑块，带 Hover/Drag 平滑渐变。
-* **1:1 垂直对称美学 Header**：无底线边框、主题蓝闪电 Icon 徽标、粗体品牌词与精细 4px 矢量实心分隔点。
-
-### 4. ⚙️ 开箱即用 & 灵活配置 (Easy Configuration)
-* **开机自启动**：设置中心内置一键开关，自动写入 Windows 注册表自启项。
-* **可视化规则管理**：支持表格内双击单元格直接编辑触发词、显示名称、直达 URL 与带参 URL，支持实时新增/删除。
-* **热重载 (Hot-Reload)**：修改保存后无需重启软件，配置即刻在后台热加载生效。
+</div>
 
 ---
 
-## 🛠️ 技术栈与架构 (Tech Stack)
+## 📖 为什么选择 Quicklet？ (Why Quicklet?)
 
-* **核心框架**：C# / .NET 8 WPF (Windows Presentation Foundation)
-* **体积控制**：单文件裁剪打包（PublishSingleFile / ReadyToRun），最终可执行程序仅 **234 KB**。
-* **持久化存储**：轻量级 JSON 配置文件 (`config.json`)。
-* **系统集成**：Windows Win32 API 热键注册（`RegisterHotKey`）与注册表自启挂载。
+在日常开发与办公中，我们每天需要几十次在浏览器中搜索或打开特定的网站（如 GitHub 仓库、Google 翻译、哔哩哔哩、YouTube 或公司内部系统）。
+
+传统的习惯是：**切到浏览器 -> 新建标签页 -> 找到书签或手动输入网址 -> 输入搜索词 -> 回车**。这个过程不仅步骤繁琐，而且极易打断当前的专注工作流。
+
+**Quicklet 的解决之道**：
+去除一切繁杂干扰，让搜索回归极简与极速——**按下全局热键 `Alt + Q`，敲入关键字加搜索词，回车即刻直达！**
+
+---
+
+## 🚀 核心特点 (Key Features)
+
+### 1. 📦 极致轻量 (Ultra-Lightweight)
+* **超小体积**：独立发布单文件可执行程序体积仅 **~200 KB**，无任何庞大的 Electron 或 WebView2 内存负担。
+* **极低资源**：开机后台驻留几乎无感，纯净无广告、无多余后台服务。
+
+### 2. ⚡ 秒级唤起与响应 (Instant & Keyboard-First)
+* **随叫随到**：默认全局热键 `Alt + Q`（支持任意自定义组合键），在任何应用中按下瞬间唤起搜索框，按 `Esc` 0毫秒隐去。
+* **键盘优先**：全流程无需鼠标，支持 `Tab` 键快速补全触发词，按方向键选项目，回车直接执行。
+
+### 3. 🎯 效率翻倍：双模式智能搜索 (Smart Search Routing)
+* **网页直达 (Direct Jump)**：输入关键字（如 `gh` 或 `bilibili`）按 Enter，直接一秒直达目标网站首页。
+* **带参搜索 (Parametric Search)**：输入 `gh wpf` 或 `translate 效率工具`，自动将检索词带入目标搜索模板，一步完成精确搜索。
+* **默认搜索兜底**：输入非关键字内容时，自动使用配置的默认搜索引擎（支持 Google、Bilibili、GitHub、百度、必应等）。
+
+### 4. ⚙️ 开箱即用 & 灵活配置 (Zero-Cost Configuration)
+* **自适应系统主题**：简洁干净的卡片界面，支持跟随 Windows 10/11 的亮色与深色主题自动无缝切换。
+* **可视化配置管理**：内置轻量设置中心，直观修改热键、自启动及搜索规则，支持实时热加载（无需重启软件）。
 
 ---
 
@@ -104,7 +102,7 @@ Quicklet 的配置文件存放在程序同级目录下的 `config.json` 中，�
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/Quicklet.git
+git clone https://github.com/stefory/Quicklet.git
 cd Quicklet
 
 # 编译项目
@@ -114,7 +112,7 @@ dotnet build
 dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true /p:PublishReadyToRun=true
 ```
 
-发布成功后，你可以在 `bin/Release/net8.0-windows/win-x64/publish/` 目录下找到轻量的 `Quicklet.exe`。
+发布成功后，你可以在 `publish/` 目录下找到轻量的 `Quicklet.exe`。
 
 ---
 

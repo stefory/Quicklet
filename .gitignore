@@ -1,0 +1,26 @@
+# .NET 构建产物
+bin/
+obj/
+publish/
+*.dll
+*.exe
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+*.zip
+
+# IDE 与编辑器配置
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+
+# AI 辅助工具日志与临时文件
+.workbuddy/
+err.txt
+outputs/
+
+# 显式保留
+!app.ico
+!Quicklet.csproj

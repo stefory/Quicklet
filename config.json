@@ -1,0 +1,49 @@
+{
+  "DefaultSearchUrl": "https://www.google.com/search?q={query}",
+  "Hotkey": "Alt+Q",
+  "Theme": "Dark",
+  "Keywords": [
+    {
+      "Keyword": "google",
+      "Name": "Google",
+      "Url": "https://www.google.com",
+      "SearchUrl": "https://www.google.com/search?q={query}"
+    },
+    {
+      "Keyword": "translate",
+      "Name": "Google 翻译",
+      "Url": "https://translate.google.com",
+      "SearchUrl": "https://translate.google.com/?sl=auto&tl=zh-CN&text={query}"
+    },
+    {
+      "Keyword": "github",
+      "Name": "GitHub",
+      "Url": "https://github.com",
+      "SearchUrl": "https://github.com/search?q={query}"
+    },
+    {
+      "Keyword": "youtube",
+      "Name": "YouTube",
+      "Url": "https://www.youtube.com",
+      "SearchUrl": "https://www.youtube.com/results?search_query={query}"
+    },
+    {
+      "Keyword": "bilibili",
+      "Name": "哔哩哔哩",
+      "Url": "https://www.bilibili.com",
+      "SearchUrl": "https://search.bilibili.com/all?keyword={query}"
+    },
+    {
+      "Keyword": "gmail",
+      "Name": "Gmail",
+      "Url": "https://mail.google.com/mail/u/0/",
+      "SearchUrl": ""
+    },
+    {
+      "Keyword": "1688",
+      "Name": "1688.com",
+      "Url": "https://www.1688.com/",
+      "SearchUrl": ""
+    }
+  ]
+}
